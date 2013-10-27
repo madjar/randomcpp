@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QookWindow</class>
+ <widget class="QMainWindow" name="QookWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QookWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="MenuWidget" name="stackedWidget"/>
+    </item>
+    <item>
+     <widget class="RecipesList" name="listView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Main">
+    <property name="title">
+     <string>&amp;Main</string>
+    </property>
+    <addaction name="action_Change_Database"/>
+   </widget>
+   <addaction name="menu_Main"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Add_Recipe"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Change_Database">
+   <property name="text">
+    <string>&amp;Change Database</string>
+   </property>
+  </action>
+  <action name="action_Add_Recipe">
+   <property name="text">
+    <string>&amp;Add Recipe</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>RecipesList</class>
+   <extends>QListView</extends>
+   <header>recipeslist.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MenuWidget</class>
+   <extends>QStackedWidget</extends>
+   <header>menuwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

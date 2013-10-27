@@ -1,0 +1,7 @@
+*~
+*.pro.user
+.bzr
+.bzrignore
+*.qm
+*.kdev4
+*-build-desktop

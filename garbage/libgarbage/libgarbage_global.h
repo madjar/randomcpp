@@ -1,0 +1,12 @@
+#ifndef LIBGARBAGE_GLOBAL_H
+#define LIBGARBAGE_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(LIBGARBAGE_LIBRARY)
+#  define LIBGARBAGESHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define LIBGARBAGESHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // LIBGARBAGE_GLOBAL_H

@@ -1,0 +1,37 @@
+<configuration>
+	<services>
+		<service name="http">
+			<port number="80"/>
+		</service>
+		<service name="smtp">
+			<and-port>
+				<port number="35"/>
+				<port number="34"/>
+			</and-port>
+		</service>
+		<service name="ssh">
+			<or-port>
+				<port number="22"/>
+				<port number="2222"/>
+				<and-port>
+					<port number="9922"/>
+					<port number="9923"/>
+				</and-port>
+			</or-port>
+		</service>
+	</services>
+	<hosts>
+		<host name="localhost" label="Moi">
+			<service name="http"/>
+			<service name="ssh"/>
+			<service name="smtp"/>
+		</host>
+		<host name="192.168.0.2" label="Test2">
+			<service name="http"/>
+			<service name="blurp"/>
+		</host>
+		<host name="a.b.c.d">
+			<service name="ssh"/>
+		</host>
+	</hosts>
+</configuration>
